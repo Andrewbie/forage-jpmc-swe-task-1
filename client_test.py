@@ -18,7 +18,18 @@ class ClientTest(unittest.TestCase):
 
 
   """ ------------ Add more unit tests ------------ """
-
+  def test_getDataPoint_calculatePriceBidLessThanAsk(self):
+    quotes = [
+      {'top_ask': {'price': 125.9, 'size': 25}, 'timestamp': '2019-02-11 22:06:30.572453', 'top_bid': {'price': 120.8, 'size': 20}, 'id': '0.109974697771', 'stock': 'ABC'},
+      {'top_ask': {'price': 119.8, 'size': 8}, 'timestamp': '2019-02-11 22:06:30.572453', 'top_bid': {'price': 119.5, 'size': 5}, 'id': '0.109974697771', 'stock': 'DEF'}
+    ]
+    """ ------------ Add the assertion below ------------ """
+  def test_getDataPoint_calculatePriceBidEqualToAsk(self):
+    quotes = [
+      {'top_ask': {'price': 125.9, 'size': 25}, 'timestamp': '2019-02-11 22:06:30.572453', 'top_bid': {'price': 125.9, 'size': 25}, 'id': '0.109974697771', 'stock': 'ABC'},
+      {'top_ask': {'price': 119.8, 'size': 8}, 'timestamp': '2019-02-11 22:06:30.572453', 'top_bid': {'price': 119.8, 'size': 8}, 'id': '0.109974697771', 'stock': 'DEF'}
+    ]
+    """ ------------ Add the assertion below ------------ """
 
 
 if __name__ == '__main__':
